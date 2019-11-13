@@ -44,11 +44,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bancomat.cs" />
+    <Compile Include="CurrencyType.cs" />
+    <Compile Include="Handlers\BanknoteHandler.cs" />
+    <Compile Include="Handlers\Dollar\DollarsHandlerBase.cs" />
+    <Compile Include="Handlers\Dollar\FiftyDollarsHandler.cs" />
+    <Compile Include="Handlers\Dollar\HundredDollarsHandler.cs" />
+    <Compile Include="Handlers\Dollar\TenDollarsHandler.cs" />
+    <Compile Include="Handlers\Ruble\TenRublesHandler.cs" />
+    <Compile Include="IBanknote.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Handlers\Euro\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
