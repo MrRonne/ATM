@@ -9,7 +9,7 @@
             _nextHandler = nextHandler;
         }
 
-        public virtual bool Validate(string banknote)
+        public virtual bool Validate(IBanknote banknote)
         {
             return _nextHandler != null && _nextHandler.Validate(banknote);
         }

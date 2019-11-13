@@ -1,15 +1,8 @@
 ﻿namespace ATM.Handlers.Ruble
 {
-    public class TenRublesHandler : BanknoteHandler
+    public class TenRublesHandler : RublesHandlerBase
     {
-        public override bool Validate(string banknote)
-        {
-            if (banknote.Equals("10 Рублей"))
-            {
-                return true;
-            }
-            return base.Validate(banknote);
-        }
+        protected override int Value => 10;
 
         public TenRublesHandler(BanknoteHandler nextHandler) : base(nextHandler)
         { }

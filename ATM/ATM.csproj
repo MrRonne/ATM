@@ -46,11 +46,31 @@
     <Compile Include="Bancomat.cs" />
     <Compile Include="CurrencyType.cs" />
     <Compile Include="Handlers\BanknoteHandler.cs" />
+    <Compile Include="Handlers\CurrencyHandlerBase.cs" />
+    <Compile Include="Handlers\Dollar\DollarHandler.cs" />
     <Compile Include="Handlers\Dollar\DollarsHandlerBase.cs" />
     <Compile Include="Handlers\Dollar\FiftyDollarsHandler.cs" />
     <Compile Include="Handlers\Dollar\HundredDollarsHandler.cs" />
     <Compile Include="Handlers\Dollar\TenDollarsHandler.cs" />
+    <Compile Include="Handlers\Dollar\TwentyDollarsHandler.cs" />
+    <Compile Include="Handlers\Dollar\TwoDollarsHandler.cs" />
+    <Compile Include="Handlers\Euro\EuroHandlerBase.cs" />
+    <Compile Include="Handlers\Euro\FiftyEuroHandler.cs" />
+    <Compile Include="Handlers\Euro\FiveEuroHandler.cs" />
+    <Compile Include="Handlers\Euro\FiveHundredEuroHandler.cs" />
+    <Compile Include="Handlers\Euro\HundredEuroHandler.cs" />
+    <Compile Include="Handlers\Euro\TenEuroHandler.cs" />
+    <Compile Include="Handlers\Euro\TwentyEuroHandler.cs" />
+    <Compile Include="Handlers\Euro\TwoHundredEuroHandler.cs" />
+    <Compile Include="Handlers\Ruble\FiftyRublesHandler.cs" />
+    <Compile Include="Handlers\Ruble\FiveHundredRublesHandler.cs" />
+    <Compile Include="Handlers\Ruble\FiveThousandRublesHandler.cs" />
+    <Compile Include="Handlers\Ruble\HundredRublesHandler.cs" />
+    <Compile Include="Handlers\Ruble\RublesHandlerBase.cs" />
     <Compile Include="Handlers\Ruble\TenRublesHandler.cs" />
+    <Compile Include="Handlers\Ruble\ThousandRublesHandler.cs" />
+    <Compile Include="Handlers\Ruble\TwoHundredRublesHandler.cs" />
+    <Compile Include="Handlers\Ruble\TwoThousandRublesHandler.cs" />
     <Compile Include="IBanknote.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,8 +78,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Handlers\Euro\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

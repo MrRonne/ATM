@@ -1,5 +1,6 @@
 ﻿using ATM.Handlers;
 using ATM.Handlers.Dollar;
+using ATM.Handlers.Euro;
 using ATM.Handlers.Ruble;
 
 namespace ATM
@@ -16,7 +17,7 @@ namespace ATM
             _handler = new HundredDollarsHandler(_handler);
         }
 
-        public bool Validate(string banknote)
+        public bool Validate(IBanknote banknote)
         {
             return _handler.Validate(banknote);
         }

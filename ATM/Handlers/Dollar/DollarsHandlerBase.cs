@@ -1,20 +1,10 @@
 ﻿namespace ATM.Handlers.Dollar
 {
-    public abstract class DollarsHandlerBase : BanknoteHandler
+    public abstract class DollarsHandlerBase : CurrencyHandlerBase
     {
-        public override bool Validate(string banknote)
-        {
-            if (banknote.Equals($"{Value}$"))
-            {
-                return true;
-            }
-            return base.Validate(banknote);
-        }
-
-        protected abstract int Value { get; }
+        protected override CurrencyType Currency => CurrencyType.Dollar;
 
         protected DollarsHandlerBase(BanknoteHandler nextHandler) : base(nextHandler)
-        {
-        }
+        { }
     }
 }
