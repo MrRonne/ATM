@@ -1,4 +1,5 @@
-﻿using ATM.Handlers;
+﻿using System.Collections.Generic;
+using ATM.Handlers;
 using ATM.Handlers.Dollar;
 using ATM.Handlers.Euro;
 using ATM.Handlers.Ruble;
@@ -9,17 +10,14 @@ namespace ATM
     {
         private readonly BanknoteHandler _handler;
 
-        public Bancomat()
+        public Bancomat(BanknoteHandler handler)
         {
-            _handler = new TenRublesHandler(null);;
-            _handler = new TenDollarsHandler(_handler);
-            _handler = new FiftyDollarsHandler(_handler);
-            _handler = new HundredDollarsHandler(_handler);
+            _handler = handler;
         }
 
-        public bool Validate(IBanknote banknote)
-        {
-            return _handler.Validate(banknote);
-        }
+        public bool Validate(Banknote banknote) => _handler.Validate(banknote);
+
+        public virtual IEnumerable<Banknote> CashOut(CurrencyType currency, int amount) =>
+            _handler.CashOut(currency, amount);
     }
 }

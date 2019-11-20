@@ -71,7 +71,7 @@
     <Compile Include="Handlers\Ruble\ThousandRublesHandler.cs" />
     <Compile Include="Handlers\Ruble\TwoHundredRublesHandler.cs" />
     <Compile Include="Handlers\Ruble\TwoThousandRublesHandler.cs" />
-    <Compile Include="IBanknote.cs" />
+    <Compile Include="Banknote.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
